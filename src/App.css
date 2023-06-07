@@ -2,9 +2,13 @@
   --color-primary: #bbe998bb;
   --color-btn: #68d463e8;
   --color-white: whitesmoke;
-  --color-font-dark: rgb(29, 27, 27, .85);
+  --color-font-dark: rgb(29, 27, 27, .75);
   --font-title: 'Fredoka One', sans-serif;
   --font-secondary: 'Signika', sans-serif;
+}
+
+body {
+  font-family: var(--font-secondary);
 }
 
 header {
@@ -12,6 +16,12 @@ header {
   background-color: var(--color-primary);
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+header > a {
+  color: var(--color-font-dark);
+  text-decoration: none;
 }
 
 h1 {
@@ -22,7 +32,6 @@ h1 {
 
 body {
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
   background-color: var(--color-white);
   color: var(--color-font-dark);
 }
@@ -124,6 +133,58 @@ body {
   opacity: .9;
 }
 
+/* ================ photo page ==================== */
+
+.photo-page__flex-container {
+  max-width: 80%;
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.image-container-photo-page {
+  max-width: 50%;
+}
+
+.image-photo-page {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-page-info {
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 0 0 .25em 0;
+}
+
+.photo-page-info > * {
+  list-style-type: none 
+}
+
+.photo-page-link, 
+.photopage.link:visited {
+  text-decoration: underline dotted;
+  color: var(--color-font-dark);
+}
+
+.photo-page-link:hover {
+  text-decoration: underline solid;
+  cursor: pointer;
+  color: rgb(20, 68, 115);
+}
+
+/*=============footer =============*/
 footer {
   font-family: var(--font-secondary);
   font-size: .9em;
@@ -144,7 +205,6 @@ footer a {
 
 footer a:hover {
   text-decoration: underline solid;
-  color: var(--color-btn);
   cursor: pointer;
   color: rgb(20, 68, 115);
   

@@ -1,11 +1,33 @@
-function PhotoCard({photographerName, urlSmall, urlThumb, alt, photoViews, photographerProfile}) {
+import { Link } from "react-router-dom"
+
+/*                <li>Full urls.full</li>
+                <li>Regular</li>
+                <li>Raw</li>
+            </li>
+
+            */
+
+function PhotoCard({ photographerName, urlSmall, urlThumb, urlRegular, urlFull, urlRaw, alt, photoViews, photographerProfile, photoLocation, photographerPortfolio }) {
     return (
         <div className="photo-card">
             <div className="image-container">
-                <a target="_blank" rel="noreferrer" href={urlSmall}>
+                <Link to={`/photo`} state={{
+                    photographerName: photographerName,
+                    photographerProfile: photographerProfile,
+                    photoLocation: photoLocation,
+                    photographerPortfolio: photographerPortfolio,
+                    urlSmall: urlSmall,
+                    urlThumb: urlThumb,
+                    urlRegular: urlRegular,
+                    urlFull: urlFull,
+                    urlRaw: urlRaw,
+                    alt: alt,
+                    photoViews: photoViews,
+
+                    }}>
                     <img src={urlThumb} alt={alt}
                         className="image" />
-                </a>
+                </Link>
             </div>
             <figcaption>
 

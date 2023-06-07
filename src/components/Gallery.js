@@ -1,6 +1,6 @@
 import PhotoCard from "./PhotoCard.js";
 import { useContext } from "react";
-import { Link } from "react-router-dom"
+
 
 import { Context } from "../Context.js";
 
@@ -12,18 +12,19 @@ function Gallery() {
 
     return (
         <div className="grid-container">
-            <Link to="/photo">
-                <PhotoCard 
-                    urlThumb="https://images.unsplash.com/photo-1683488780112-f47a64de5d15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYxMjkyMDZ8&ixlib=rb-4.0.3&q=80&w=200"
-                />
-            </Link>
-            {photos.map((photo, index) => <PhotoCard
+            {photos.map((photo) => <PhotoCard
                 photographerName={photo.user.name}
                 urlSmall={photo.urls.small}
                 urlThumb={photo.urls.thumb}
+                urlRegular={photo.urls.regular}
+                urlFull={photo.urls.full}
+                urlRaw={photo.urls.raw}
                 alt={photo.alt_description}
                 photoViews={photo.views}
                 photographerProfile={photo.user.links.html}
+                photoLocation={photo.location.name}
+                photographerPortfolio={photo.user.portfolio_url}
+                key={photo.user.id}
             />)}
         </div>
     )
