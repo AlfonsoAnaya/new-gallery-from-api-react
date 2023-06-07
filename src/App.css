@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+:root {
+  --color-primary: #bbe998bb;
+  --color-btn: #68d463e8;
+  --color-white: whitesmoke;
+  --color-font-dark: rgb(29, 27, 27, .85);
+  --font-title: 'Fredoka One', sans-serif;
+  --font-secondary: 'Signika', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 6em;
+  background-color: var(--color-primary);
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  margin: 0 auto;
+  font-family: var(--font-title);
+  font-size: 3em;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-font-dark);
+}
+
+.input-bar {
+  margin: 1em auto;
+  width: 50%;
+}
+
+.form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+.form * {
+  width: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form > label > input, .form > button {
+  border-radius: 2em;
+  border: 2px solid rgb(29, 27, 27, .6);
+  padding: .75em 1em;
+}
+
+.btn {
+  padding: .75em 1.5em;
+  border: 2px solid transparent;
+  border-radius: 1em;
+  background-color: var(--color-white);
+  color: var(--color-font-dark);
+  font-weight: 700;
+  font-size: 1em;
+  transition: ease-in .15s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  transform: scale(1.05)
+}
+
+.grid-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  display: grid;
+  justify-content: center;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, 13em);
+}
+
+.photo-card {
+  width:13em;
+  height:21.1em;
+}
+
+.image-container {
+  width: 100%;
+  height: 18em;
+  overflow: hidden;
+}
+
+.image-container:hover {
+  opacity: .8;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author, .views {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.author {
+  font-size: .8em;
+  opacity: .9;
+  margin: .2em 0;
+}
+
+.views {
+  font-size: .8em;
+  opacity: .8;
+}
+
+.link {
+  color: inherit;
+  opacity: .6;
+  text-decoration: none;
+}
+
+.link:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+
+footer {
+  font-family: var(--font-secondary);
+  font-size: .9em;
+  text-align: center;
+  height: 3em;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: underline dotted;
+  cursor: pointer;
+  color: var(--color-font-dark);
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline solid;
+  color: var(--color-btn);
+  cursor: pointer;
+  color: rgb(20, 68, 115);
+  
 }
