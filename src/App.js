@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Gallery />} />
-        <Route exact path="/photo" element={<PhotoPage />} />
+        <Route exact path="/photo/:photoId" element={<PhotoPage />} />
       </Routes>
       <Footer />
     </div>

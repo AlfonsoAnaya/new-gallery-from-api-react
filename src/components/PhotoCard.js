@@ -7,11 +7,11 @@ import { Link } from "react-router-dom"
 
             */
 
-function PhotoCard({ photographerName, urlSmall, urlThumb, urlRegular, urlFull, urlRaw, alt, photoViews, photographerProfile, photoLocation, photographerPortfolio }) {
+function PhotoCard({ photoId, photographerName, urlSmall, urlThumb, urlRegular, urlFull, urlRaw, alt, photoViews, photographerProfile, photoLocation, photographerPortfolio }) {
     return (
         <div className="photo-card">
             <div className="image-container">
-                <Link to={`/photo`} state={{
+                <Link to={`/photo/${photoId}`} state={{
                     photographerName: photographerName,
                     photographerProfile: photographerProfile,
                     photoLocation: photoLocation,

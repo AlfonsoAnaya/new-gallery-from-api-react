@@ -13,6 +13,7 @@ function Gallery() {
     return (
         <div className="grid-container">
             {photos.map((photo) => <PhotoCard
+                photoId={photo.id}
                 photographerName={photo.user.name}
                 urlSmall={photo.urls.small}
                 urlThumb={photo.urls.thumb}
