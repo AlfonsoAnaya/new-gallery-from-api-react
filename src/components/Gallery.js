@@ -1,7 +1,6 @@
 import PhotoCard from "./PhotoCard.js";
 import { useContext } from "react";
 
-
 import { Context } from "../Context.js";
 
 function Gallery() {
