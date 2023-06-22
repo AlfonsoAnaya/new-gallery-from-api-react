@@ -50,7 +50,8 @@ function ContextProvider({ children }) {
 
     function handleInputChange(queryInput, countInput) {
         setQuery(queryInput);
-        setCount(countInput.toString());
+        if (countInput === '') {setCount("10")}
+        else {setCount(countInput.toString());}
         setSearch(search+1);
     };
 
