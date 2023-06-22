@@ -9,6 +9,8 @@ function ContextProvider({ children }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [count, setCount] = useState("30");
+    const [query, setQuery] = useState("plants");
+    const [search, setSearch] = useState(0)
 
 
     /*
@@ -29,7 +31,8 @@ function ContextProvider({ children }) {
 
 
     useEffect(() => {
-        fetch(`https://apis.scrimba.com/unsplash/photos/random/?count=${count}&orientation=portrait&query=plants`)
+        setPhotos([]);
+        fetch(`https://apis.scrimba.com/unsplash/photos/random/?count=${count}&orientation=portrait&query=${query}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -43,14 +46,22 @@ function ContextProvider({ children }) {
         .finally(
             setLoading(false)
         )
-    }, [count]);
+    }, [query, count, search]);
 
+    function handleInputChange(queryInput, countInput) {
+        setQuery(queryInput);
+        setCount(countInput.toString());
+        setSearch(search+1);
+    };
 
     return (
         <Context.Provider value={{
             photos,
             loading,
-            error
+            error,
+            query,
+            count,
+            handleInputChange
         }}>
             {children}
         </Context.Provider>

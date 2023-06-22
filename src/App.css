@@ -36,19 +36,26 @@ body {
   color: var(--color-font-dark);
 }
 
-.input-bar {
-  margin: 1em auto;
+.search-bar {
+  margin: 1.5em auto;
   width: 50%;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 1.5em;
+  align-items: center;
+  justify-items: center;
 }
 
 .form * {
   width: 30%;
+  box-sizing: border-box;
+}
+
+.form > label > input {
+  width: 100%;
 }
 
 .form > label > input, .form > button {
@@ -58,13 +65,8 @@ body {
 }
 
 .btn {
-  padding: .75em 1.5em;
-  border: 2px solid transparent;
-  border-radius: 1em;
   background-color: var(--color-white);
   color: var(--color-font-dark);
-  font-weight: 700;
-  font-size: 1em;
   transition: ease-in .15s;
 }
 
