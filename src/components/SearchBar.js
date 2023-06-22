@@ -29,7 +29,7 @@ function SearchBar() {
                     onChange={(e)=>setNewCount(e.target.value)}
                     />
                 </label>
-                <button class="btn" type="submit" onClick={(e)=>handleInputChange(newQuery, newCount)}>Search</button>
+                <button className="btn" type="submit" onClick={(e)=>handleInputChange(newQuery, newCount)}>Search</button>
             </form>
         </div>
     )
