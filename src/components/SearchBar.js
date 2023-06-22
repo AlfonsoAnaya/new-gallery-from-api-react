@@ -4,7 +4,7 @@ import {Context} from "../Context"
 import { useState } from "react"
 
 function SearchBar() {
-    let {handleInputChange, query, count} = useContext(Context);
+    let {handleInputChange} = useContext(Context);
     const [newQuery, setNewQuery] = useState('');
     const [newCount, setNewCount] = useState('');
 
