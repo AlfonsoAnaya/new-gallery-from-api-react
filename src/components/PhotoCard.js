@@ -25,7 +25,7 @@ function PhotoCard({ photoId, photographerName, urlSmall, urlThumb, urlRegular, 
                     photoViews: photoViews,
 
                     }}>
-                    <img src={urlThumb} alt={alt}
+                    <img src={urlSmall} alt={alt}
                         className="image" />
                 </Link>
             </div>
