@@ -1,7 +1,7 @@
 function BookmarkPage() {
     return (
         <div>
-
+            
         </div>
     )
 }

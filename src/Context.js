@@ -6,6 +6,7 @@ function ContextProvider({ children }) {
 
 
     const [photos, setPhotos] = useState([]);
+    const [bookmarkedPhotos, setBookmarkedPhotos] = useState([])
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [count, setCount] = useState("30");
@@ -27,8 +28,6 @@ function ContextProvider({ children }) {
             })
     };
     */
-
-
 
     useEffect(() => {
         setPhotos([]);
@@ -55,6 +54,10 @@ function ContextProvider({ children }) {
         setSearch(search+1);
     };
 
+    function handleBookmark(photo) {
+        //setBookmarkedPhotos(bookmarkedPhotos)
+    }
+
     return (
         <Context.Provider value={{
             photos,
@@ -69,10 +72,6 @@ function ContextProvider({ children }) {
     )
 
 };
-
-
-
-
 
 export { ContextProvider, Context }
 
