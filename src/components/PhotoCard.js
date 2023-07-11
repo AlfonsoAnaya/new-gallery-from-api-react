@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import { useContext } from "react";
+import { Context } from "../Context.js";
 
 /*                <li>Full urls.full</li>
                 <li>Regular</li>
@@ -8,6 +10,7 @@ import { Link } from "react-router-dom"
             */
 
 function PhotoCard({ photoId, photographerName, urlSmall, urlThumb, urlRegular, urlFull, urlRaw, alt, photoViews, photographerProfile, photoLocation, photographerPortfolio }) {
+    let { handleBookmark } = useContext(Context);
     return (
         <div className="photo-card">
             <div className="image-container">
@@ -36,6 +39,7 @@ function PhotoCard({ photoId, photographerName, urlSmall, urlThumb, urlRegular, 
                 </p>
 
                 <p className="views"> Views: {photoViews}</p>
+                <button onClick ={(e)=>handleBookmark()}>Add bookmark</button>
             </figcaption >
         </div >
     )
