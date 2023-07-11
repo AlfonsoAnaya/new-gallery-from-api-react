@@ -55,7 +55,7 @@ function ContextProvider({ children }) {
     };
 
     function handleBookmark(photo) {
-        //setBookmarkedPhotos(bookmarkedPhotos)
+        setBookmarkedPhotos(bookmarkedPhotos => bookmarkedPhotos.push(photo))
     }
 
     return (
@@ -65,7 +65,9 @@ function ContextProvider({ children }) {
             error,
             query,
             count,
-            handleInputChange
+            handleInputChange,
+            bookmarkedPhotos,
+            handleBookmark
         }}>
             {children}
         </Context.Provider>
