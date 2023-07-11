@@ -8,6 +8,9 @@ function Header() {
                     Explore Unsplash Images
                 </h1>
             </Link>
+            <Link to="/bookmarks">
+                <p>Bookmarks</p>
+            </Link>
         </header>
     )
 }
