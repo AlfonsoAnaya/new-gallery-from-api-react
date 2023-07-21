@@ -31,6 +31,7 @@ function PhotoCard({ photoId, photographerName, urlSmall, urlThumb, urlRegular, 
                     <img src={urlSmall} alt={alt}
                         className="image" />
                 </Link>
+                <button>add bookmark</button>
             </div>
             <figcaption>
 

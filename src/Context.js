@@ -55,7 +55,7 @@ function ContextProvider({ children }) {
     };
 
     function handleBookmark(photo) {
-        setBookmarkedPhotos(bookmarkedPhotos => bookmarkedPhotos.push(photo))
+        setBookmarkedPhotos(...bookmarkedPhotos, photo)
     }
 
     return (
