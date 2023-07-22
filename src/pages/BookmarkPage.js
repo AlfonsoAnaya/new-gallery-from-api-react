@@ -7,6 +7,7 @@ function BookmarkPage() {
     return (
         <div>
             <p>bookmarked photos go here</p>
+            <p>{bookmarkedPhotos}</p>
         </div>
     )
 }
