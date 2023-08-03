@@ -55,7 +55,10 @@ function ContextProvider({ children }) {
     };
 
     function handleBookmark(photo) {
-        setBookmarkedPhotos(bookmarkedPhotos => bookmarkedPhotos.push("new photo"));
+        setBookmarkedPhotos([
+            ...bookmarkedPhotos, 
+            "new item"
+        ]);
         console.log(bookmarkedPhotos);
     }
 
